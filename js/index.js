@@ -21,7 +21,6 @@ const userList = document.getElementById('user-list')
 // deliverable 2: display user information
 function renderData(users) {
     users.forEach(userObject => {
-        console.log(userObject)
         const userAvatar = document.createElement('img')
         userAvatar.src = userObject.avatar_url
         
@@ -44,4 +43,13 @@ function fetchRepoData(userLogin) {
     .then(repos => renderRepos(repos))
 }
 
+const repoList = document.getElementById('repos-list')
+
 // deliverable 4: display all repos for user
+function renderRepos(repos) {
+    repos.forEach(singleRepo => {
+        const repoListItem = document.createElement('li')
+        repoListItem.innerText = singleRepo.name
+        repoList.appendChild(repoListItem)
+    })
+}

@@ -5,10 +5,10 @@
 }
 
 #github-container {
-  display: flex;
+  display: block;
 }
 
-ul {
+#user-list {
   list-style: none;
   display: flex;
   gap: 20px;
